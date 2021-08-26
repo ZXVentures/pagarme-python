@@ -1,4 +1,6 @@
-BASE_URL = 'https://pagarme.ze.delivery/1/transactions'
+import os
+
+BASE_URL = f'{os.environ.get("INTEGRATION_PAGARME_URL", "https://pagarme.ze.delivery")}/1/transactions'
 
 CALCULATE_INSTALLMENTS_AMOUNT = BASE_URL + '/calculate_installments_amount'
 
