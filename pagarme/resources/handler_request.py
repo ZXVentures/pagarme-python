@@ -1,7 +1,8 @@
 import requests
 from pagarme import sdk
+import os
 
-TEMPORARY_COMPANY = 'https://pagarme.ze.delivery/1/companies/temporary'
+TEMPORARY_COMPANY = f'{os.environ.get("INTEGRATION_PAGARME_URL", "https://pagarme.ze.delivery")}/1/companies/temporary'
 
 KEYS = {}
 

@@ -1,6 +1,8 @@
 from pagarme.resources.routes import company_routes
 
-BASE_URL = 'https://pagarme.ze.delivery/1/recipients'
+import os
+
+BASE_URL = f'{os.environ.get("INTEGRATION_PAGARME_URL", "https://pagarme.ze.delivery")}/1/recipients'
 
 GET_ALL_RECIPIENTS = BASE_URL
 
